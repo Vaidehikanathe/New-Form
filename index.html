@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .formerror {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/2dba5ee333.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Register</h1>
+            <!-- <form onsubmit="callvalue()"></form> -->
+            <form action="/myaction.php" name="myForm" onsubmit="return validateForm(), callvalue()" method="post" id="form">
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name" name="fname" required>
+                        <b><span class="formerror"></span></b>
+                    </div>
+                    <div class="input-field" id="ageField">
+                        <i class="fa-solid fa-child"></i>
+                        <input type="number" placeholder="Age" name="fage" required>
+                        <b><span class="ageerror"></span></b>
+                    </div>
+                    <div class="input-field" id="weightField">
+                        <i class="fa-solid fa-weight-scale"></i>
+                        <input type="number" placeholder="Weight" name="fweight" required>
+                        <b><span class="weighterror"></span></b>
+                    </div>
+
+                    <div class="input-field" id="emailField">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" name="femail" required>
+                        <b><span class="emailerror"></span></b>
+                    </div>
+                    <div class="health">Health Report:</div>
+                    <div class="input-field" id="fileField">
+                        
+                   <input type="file" id="file" accept=".pdf, .jpg, .png" required>
+
+                    </div>
+                
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="signup" value="submit">Submit</button>
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+   
+</body>
+<script src="index.js"></script>
+</html>
